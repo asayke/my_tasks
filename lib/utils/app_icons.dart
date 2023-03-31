@@ -5,4 +5,5 @@ abstract class AppIcons {
   static const String alphabeticalSortingIcon = "assets/icons/alphabetical_sorting_icon.svg";
   static const String alphabeticalSortingTwoIcon = "assets/icons/alphabetical_sorting_two_icon.svg";
   static const String arrowsAscendingDownSortSortingIcon = "assets/icons/arrows_ascending_down_sort_sorting_icon.svg";
+  static const String chevronLeftIcon = "assets/icons/chevron.svg";
 }

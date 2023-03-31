@@ -18,33 +18,40 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: const EmptyPage(),
       bottomNavigationBar: SizedBox(
-        height: 65.h,
+        height: 52.h,
         child: BottomNavigationBar(
-            selectedItemColor: AppColors.selectedItemColor,
-            unselectedItemColor: AppColors.unselectedItemColor,
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            backgroundColor: AppColors.dirtyWhite,
-            items: [
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  AppIcons.alphabeticalSortingIcon,
-                ),
-                label: "",
+          selectedItemColor: AppColors.selectedItemColor,
+          unselectedItemColor: AppColors.unselectedItemColor,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          backgroundColor: AppColors.dirtyWhite,
+          items: [
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                AppIcons.alphabeticalSortingIcon,
+                width: 20.8.w,
+                height: 20.8.h,
               ),
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  AppIcons.alphabeticalSortingTwoIcon,
-                ),
-                label: "",
+              label: "",
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                AppIcons.alphabeticalSortingTwoIcon,
+                width: 20.8.w,
+                height: 20.8.h,
               ),
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  AppIcons.arrowsAscendingDownSortSortingIcon,
-                ),
-                label: "",
+              label: "",
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                AppIcons.arrowsAscendingDownSortSortingIcon,
+                width: 20.8.w,
+                height: 20.8.h,
               ),
-            ]),
+              label: "",
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_tasks/utils/app_icons.dart';
+import 'package:my_tasks/widgets/add_new_task.dart';
 
 class FloatingButtons extends StatelessWidget {
   const FloatingButtons({super.key});
@@ -22,7 +23,13 @@ class FloatingButtons extends StatelessWidget {
             ),
             GestureDetector(
               child: SvgPicture.asset(AppIcons.addIcon),
-              onTap: () {},
+              onTap: () {
+                showBottomSheet(
+                  context: context,
+                  elevation: 0,
+                  builder: (context) => const NewTaskPage(),
+                );
+              },
             ),
           ],
         ),

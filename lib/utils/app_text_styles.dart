@@ -22,4 +22,22 @@ abstract class AppTextStyles {
     letterSpacing: -0.24.w,
     fontWeight: FontWeight.w600,
   );
+
+  static final TextStyle blackButtonsTextStyle = TextStyle(
+    fontFamily: fontFamilyOpenSans,
+    fontWeight: FontWeight.w600,
+    letterSpacing: -0.34.w,
+    fontSize: 14.06.sp,
+    height: 18.2.h / 14.06.sp,
+    color: Colors.white,
+  );
+
+  static final TextStyle microTitlesTextStyle = TextStyle(
+    fontFamily: fontFamilyOpenSans,
+    fontWeight: FontWeight.w600,
+    fontSize: 20.sp,
+    height: 24.h / 20.sp,
+    color: Colors.black,
+    letterSpacing: 0.38.w,
+  );
 }
