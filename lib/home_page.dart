@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_tasks/utils/app_colors.dart';
 import 'package:my_tasks/utils/app_icons.dart';
 import 'package:my_tasks/widgets/empty_page.dart';
+import 'package:my_tasks/widgets/information.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const EmptyPage(),
+      body: const Information(),
       bottomNavigationBar: SizedBox(
         height: 52.h,
         child: BottomNavigationBar(
