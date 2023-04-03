@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_tasks/utils/app_icons.dart';
-import 'package:my_tasks/widgets/add_new_task.dart';
+import 'package:my_tasks/pages/add_task_page/add_new_task.dart';
 
 class FloatingButtons extends StatelessWidget {
   const FloatingButtons({super.key});
@@ -27,7 +27,16 @@ class FloatingButtons extends StatelessWidget {
                 showBottomSheet(
                   context: context,
                   elevation: 0,
-                  builder: (context) => const NewTaskPage(),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(10),
+                    ),
+                  ),
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  builder: (context) => SizedBox(
+                    height: 773.09.h,
+                    child: const NewTaskPage(),
+                  ),
                 );
               },
             ),

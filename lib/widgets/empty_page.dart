@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_tasks/utils/app_icons.dart';
 import 'package:my_tasks/utils/app_text_styles.dart';
+import 'package:my_tasks/widgets/bottom_navigation_bar.dart';
 import 'package:my_tasks/widgets/floating_buttons.dart';
 
 class EmptyPage extends StatelessWidget {
@@ -37,9 +38,7 @@ class EmptyPage extends StatelessWidget {
                   style: AppTextStyles.lightGreyTextStyle,
                 ),
               ),
-              SizedBox(
-                height: 8.h,
-              ),
+              SizedBox(height: 8.h),
             ],
           ),
         ),
@@ -52,6 +51,8 @@ class EmptyPage extends StatelessWidget {
         ),
         SizedBox(height: 31.74.h),
         const FloatingButtons(),
+        SizedBox(height: 20.h),
+        const BottomBar(),
       ],
     );
   }
