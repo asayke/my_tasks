@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_tasks/pages/add_task_page/widgets/add_task_appbar.dart';
+import 'package:my_tasks/pages/add_task_page/widgets/date_widget.dart';
+import 'package:my_tasks/pages/add_task_page/widgets/time_widget.dart';
 import 'package:my_tasks/utils/app_colors.dart';
 import 'package:my_tasks/utils/app_text_styles.dart';
 
@@ -12,6 +14,9 @@ class NewTaskPage extends StatefulWidget {
 }
 
 class _NewTaskPageState extends State<NewTaskPage> {
+  DateTime _date = DateTime.now();
+  TimeOfDay _time = TimeOfDay.now();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,49 +63,11 @@ class _NewTaskPageState extends State<NewTaskPage> {
                 )
               ],
             ),
-            SizedBox(
-              height: 40.h,
-            ),
-            Row(
-              children: [
-                Text(
-                  "Time",
-                  style: AppTextStyles.microTitlesTextStyle,
-                ),
-                SizedBox(width: 22.w),
-                Container(
-                  width: 86.w,
-                  height: 36.h,
-                  decoration: BoxDecoration(
-                    color: AppColors.pickersBackgroundColor,
-                    borderRadius: BorderRadius.circular(6),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 40.h,
-            ),
-            Row(
-              children: [
-                Text(
-                  "Date",
-                  style: AppTextStyles.microTitlesTextStyle,
-                ),
-                SizedBox(width: 24.w),
-                Container(
-                  width: 163.w,
-                  height: 36.h,
-                  decoration: BoxDecoration(
-                    color: AppColors.pickersBackgroundColor,
-                    borderRadius: BorderRadius.circular(6),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 63.h,
-            ),
+            SizedBox(height: 40.h),
+            TimeWidget(time: _time),
+            SizedBox(height: 40.h),
+            DatePicker(date: _date),
+            SizedBox(height: 63.h),
             GestureDetector(
               onTap: () {},
               child: Container(

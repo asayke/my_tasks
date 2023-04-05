@@ -40,4 +40,13 @@ abstract class AppTextStyles {
     color: Colors.black,
     letterSpacing: 0.38.w,
   );
+
+  static final TextStyle pickersTextStyle = TextStyle(
+    fontFamily: fontFamilyOpenSans,
+    fontSize: 22.sp,
+    height: 28.h / 22.sp,
+    letterSpacing: 0.35.w,
+    color: Colors.black,
+    fontWeight: FontWeight.w400,
+  );
 }

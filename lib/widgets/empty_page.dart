@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_tasks/utils/app_icons.dart';
 import 'package:my_tasks/utils/app_text_styles.dart';
-import 'package:my_tasks/widgets/bottom_navigation_bar.dart';
-import 'package:my_tasks/widgets/floating_buttons.dart';
+import 'package:my_tasks/widgets/buttons/bottom_navigation_bar.dart';
+import 'package:my_tasks/widgets/buttons/floating_buttons.dart';
 
 class EmptyPage extends StatelessWidget {
   const EmptyPage({super.key});
@@ -49,7 +49,7 @@ class EmptyPage extends StatelessWidget {
           ),
           child: SvgPicture.asset(AppIcons.arrowIcon),
         ),
-        SizedBox(height: 31.74.h),
+        SizedBox(height: 15.h),
         const FloatingButtons(),
         SizedBox(height: 20.h),
         const BottomBar(),

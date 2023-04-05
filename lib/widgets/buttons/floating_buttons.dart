@@ -27,11 +27,6 @@ class FloatingButtons extends StatelessWidget {
                 showBottomSheet(
                   context: context,
                   elevation: 0,
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.vertical(
-                      top: Radius.circular(10),
-                    ),
-                  ),
                   clipBehavior: Clip.antiAliasWithSaveLayer,
                   builder: (context) => SizedBox(
                     height: 773.09.h,
