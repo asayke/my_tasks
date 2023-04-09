@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:second_task_data_usage/utils/colors/project_colors.dart';
 import 'package:second_task_data_usage/utils/icons/project_icons.dart';
-import 'package:second_task_data_usage/utils/strings/projects_strings.dart';
 import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
 
 class CupertinoLikeAppbar extends StatelessWidget
@@ -25,7 +24,7 @@ class CupertinoLikeAppbar extends StatelessWidget
       backgroundColor: ProjectColors.appBarBackgroundColor,
       leading: const _AppbarPopLeading(),
       title: Text(
-        ProjectStrings.appBarAdd,
+        "task",
         style: ProjectStyles.semiBoldBlack17OpenSans,
       ),
       centerTitle: true,
@@ -58,7 +57,7 @@ class _AppbarPopLeading extends StatelessWidget {
             ),
           ),
           Text(
-            ProjectStrings.appBarClose,
+            "Close",
             style: ProjectStyles.semiBoldActive17OpenSans,
           ),
         ],

@@ -79,7 +79,7 @@ class TasksListBloc extends Bloc<TasksListEvent, TasksListState> {
       );
     } else {
       emit(
-        Initial(tasks: []),
+        const Initial(tasks: []),
       );
     }
   }

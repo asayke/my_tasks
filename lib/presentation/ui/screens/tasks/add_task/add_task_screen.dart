@@ -8,7 +8,6 @@ import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/wi
 import 'package:second_task_data_usage/presentation/ui/widgets/rounded_btn_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/widgets/time_info_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/widgets/title_with_text_btn_widget.dart';
-import 'package:second_task_data_usage/utils/strings/projects_strings.dart';
 import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
 import 'package:uuid/uuid.dart';
 
@@ -34,7 +33,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
         child: Column(
           children: [
             const TextTitleWithBtn(
-              title: ProjectStrings.titleAdd,
+              title: "Add a task",
               isBtn: false,
             ),
             Form(
@@ -61,7 +60,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               height: 57.h,
             ),
             RoundedBtnWidget(
-              bntText: ProjectStrings.btnDone,
+              bntText: "Done",
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
                   context.read<TasksListBloc>().add(
@@ -117,7 +116,7 @@ class _TextInputRawWidget extends StatelessWidget {
     return Row(
       children: [
         Text(
-          ProjectStrings.infoName,
+          "Name",
           style: ProjectStyles.semiBoldBlack20OpenSans,
         ),
         SizedBox(
@@ -133,7 +132,7 @@ class _TextInputRawWidget extends StatelessWidget {
             },
             controller: textEditingController,
             decoration:
-                const InputDecoration(hintText: ProjectStrings.fishShort),
+                const InputDecoration(hintText: "Lorem ipsum dolor sit amet"),
           ),
         ),
       ],
@@ -155,7 +154,7 @@ class _TimeInputRawWidget extends StatelessWidget {
     return Row(
       children: [
         Text(
-          ProjectStrings.infoTime,
+          "Time",
           style: ProjectStyles.semiBoldBlack20OpenSans,
         ),
         SizedBox(
@@ -186,7 +185,7 @@ class _DateInputRawWidget extends StatelessWidget {
     return Row(
       children: [
         Text(
-          ProjectStrings.infoDate,
+          "Date",
           style: ProjectStyles.semiBoldBlack20OpenSans,
         ),
         SizedBox(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:second_task_data_usage/utils/strings/projects_strings.dart';
 import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
 
 class TextTitleWithBtn extends StatelessWidget {
@@ -36,7 +35,7 @@ class TextTitleWithBtn extends StatelessWidget {
               child: TextButton(
                 onPressed: onPressed,
                 child: Text(
-                  value ? ProjectStrings.btnShow : ProjectStrings.btnHide,
+                  value ? "Show completed" : "Hide completed",
                   style: ProjectStyles.semiBoldActive13OpenSans,
                 ),
               ),

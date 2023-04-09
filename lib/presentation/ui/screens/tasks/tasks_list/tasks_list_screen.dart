@@ -5,7 +5,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:second_task_data_usage/presentation/bloc/tasks_list_bloc.dart';
 import 'package:second_task_data_usage/utils/colors/project_colors.dart';
 import 'package:second_task_data_usage/utils/icons/project_icons.dart';
-import 'package:second_task_data_usage/utils/strings/projects_strings.dart';
 import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
 import 'package:second_task_data_usage/domain/models/sort_types.dart';
 import 'package:second_task_data_usage/domain/models/task.dart';
@@ -30,7 +29,7 @@ class TasksScreen extends StatelessWidget {
               BlocBuilder<TasksListBloc, TasksListState>(
                 builder: (context, state) {
                   return TextTitleWithBtn(
-                    title: ProjectStrings.titleList,
+                    title: "My tasks",
                     isBtn: state is Initial,
                     onPressed: () {
                       context
@@ -162,7 +161,7 @@ class _TasksNoTasksWidget extends StatelessWidget {
           height: 115.h,
           width: 156.w,
           child: Text(
-            ProjectStrings.noTasks,
+            "Looks like there is no tasks yet! Go ahead and push a plus button below",
             style: ProjectStyles.semiBoldGrey15OpenSans,
           ),
         ),
