@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:second_task_data_usage/presentation/bloc/tasks_list_bloc.dart';
+import 'package:second_task_data_usage/presentation/ui/screens/tasks/tasks_list/widgets/loading_widget.dart';
 import 'package:second_task_data_usage/utils/colors/app_colors.dart';
 import 'package:second_task_data_usage/utils/icons/app_icons.dart';
 import 'package:second_task_data_usage/utils/text_styles/app_text_styles.dart';
@@ -50,7 +51,7 @@ class TasksScreen extends StatelessWidget {
                       return const _TasksNoTasksWidget();
                     }
                   } else {
-                    return const _LoadingWidget();
+                    return const LoadingWidget();
                   }
                 },
               ),
@@ -232,23 +233,6 @@ class _TasksFloatingButtons extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class _LoadingWidget extends StatelessWidget {
-  const _LoadingWidget({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Center(
-        child: SizedBox(
-          width: 150.w,
-          height: 150.h,
-          child: const CircularProgressIndicator(),
-        ),
       ),
     );
   }

@@ -4,11 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:second_task_data_usage/presentation/bloc/tasks_list_bloc.dart';
 import 'package:second_task_data_usage/domain/models/task.dart';
 import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/widgets/add_task_app_bar.dart';
-import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/widgets/date_info_widget.dart';
+import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/widgets/date_input_widget.dart';
+import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/widgets/text_input_widget.dart';
+import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/widgets/time_input_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/widgets/confirm_button_widget.dart';
-import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/widgets/time_info_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/widgets/title_with_text_btn_widget.dart';
-import 'package:second_task_data_usage/utils/text_styles/app_text_styles.dart';
 import 'package:uuid/uuid.dart';
 
 class AddTaskScreen extends StatefulWidget {
@@ -38,21 +38,21 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
             ),
             Form(
               key: _formKey,
-              child: _TextInputRawWidget(
+              child: TextInputRawWidget(
                 textEditingController: _textEditingController,
               ),
             ),
             SizedBox(
               height: 30.h,
             ),
-            _TimeInputRawWidget(
+            TimeInputRawWidget(
               currentTime: _currentTime,
               onTap: _changeTimeByDialog,
             ),
             SizedBox(
               height: 28.h,
             ),
-            _DateInputRawWidget(
+            DateInputRawWidget(
               currentDate: _currentDate,
               onTap: _changeDateByDialog,
             ),
@@ -103,101 +103,5 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
         ) ??
         _currentDate;
     setState(() {});
-  }
-}
-
-class _TextInputRawWidget extends StatelessWidget {
-  const _TextInputRawWidget({required this.textEditingController, Key? key})
-      : super(key: key);
-  final TextEditingController textEditingController;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          "Name",
-          style: AppStyles.semiBoldBlack20OpenSans,
-        ),
-        SizedBox(
-          width: 11.w,
-        ),
-        Expanded(
-          child: TextFormField(
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return "Please enter some text";
-              }
-              return null;
-            },
-            controller: textEditingController,
-            decoration:
-                const InputDecoration(hintText: "Lorem ipsum dolor sit amet"),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class _TimeInputRawWidget extends StatelessWidget {
-  const _TimeInputRawWidget({
-    required this.currentTime,
-    required this.onTap,
-    Key? key,
-  }) : super(key: key);
-  final TimeOfDay currentTime;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          "Time",
-          style: AppStyles.semiBoldBlack20OpenSans,
-        ),
-        SizedBox(
-          width: 22.w,
-        ),
-        InkWell(
-          onTap: onTap,
-          child: TimeInfoWidget(
-            time: currentTime,
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class _DateInputRawWidget extends StatelessWidget {
-  const _DateInputRawWidget({
-    required this.currentDate,
-    required this.onTap,
-    Key? key,
-  }) : super(key: key);
-  final DateTime currentDate;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          "Date",
-          style: AppStyles.semiBoldBlack20OpenSans,
-        ),
-        SizedBox(
-          width: 24.w,
-        ),
-        InkWell(
-          onTap: onTap,
-          child: DateInfoWidget(
-            date: currentDate,
-          ),
-        ),
-      ],
-    );
   }
 }
