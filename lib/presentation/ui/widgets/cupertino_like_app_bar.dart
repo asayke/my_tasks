@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg_icons/flutter_svg_icons.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../assets/colors/project_colors.dart';
 import '../../../../assets/icons/project_icons.dart';
 import '../../../../assets/strings/projects_strings.dart';
@@ -52,12 +52,12 @@ class _AppbarPopLeading extends StatelessWidget {
               left: 9.w,
               right: 5.w,
             ),
-            child: const SvgIcon(
+            child: SvgPicture.asset(ProjectIcons.iBack, color: ProjectColors.activeColor,) /*const SvgIcon(
               icon: SvgIconData(
                 ProjectIcons.iBack,
               ),
               color: ProjectColors.activeColor,
-            ),
+            ),*/
           ),
           Text(
             ProjectStrings.appBarClose,

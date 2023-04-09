@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg_icons/flutter_svg_icons.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:second_task_data_usage/presentation/bloc/tasks_list_bloc.dart';
 import '../../../../../../assets/colors/project_colors.dart';
 import '../../../../../../assets/icons/project_icons.dart';
@@ -83,24 +83,15 @@ class _TasksBottomNavigationBarState extends State<_TasksBottomNavigationBar> {
       showUnselectedLabels: false,
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: SvgIcon(
-            icon: const SvgIconData(ProjectIcons.iBarUp),
-            size: 40.h,
-          ),
+          icon: SvgPicture.asset(ProjectIcons.iBarUp, height: 40.h,),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: SvgIcon(
-            icon: const SvgIconData(ProjectIcons.iBarDown),
-            size: 40.h,
-          ),
+          icon: SvgPicture.asset(ProjectIcons.iBarDown, height: 40.h,),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: SvgIcon(
-            icon: const SvgIconData(ProjectIcons.iBarDate),
-            size: 40.h,
-          ),
+          icon: SvgPicture.asset(ProjectIcons.iBarDate, height: 40.h,),
           label: '',
         ),
       ],
@@ -191,10 +182,7 @@ class _TasksFloatingButtons extends StatelessWidget {
               Navigator.pushNamed(context, '/infoScreen');
             },
             backgroundColor: ProjectColors.btnColor,
-            child: SvgIcon(
-              icon: const SvgIconData(ProjectIcons.iInfo),
-              size: 32.h,
-            ),
+            child: SvgPicture.asset(ProjectIcons.iInfo, height: 32.h,),
           ),
           Expanded(child: Container()),
           FloatingActionButton(
@@ -227,10 +215,7 @@ class _TasksFloatingButtons extends StatelessWidget {
               );
             },
             backgroundColor: ProjectColors.btnColor,
-            child: SvgIcon(
-              icon: const SvgIconData(ProjectIcons.iPlus),
-              size: 32.h,
-            ),
+            child: SvgPicture.asset(ProjectIcons.iPlus, height: 32.h,),
           ),
         ],
       ),

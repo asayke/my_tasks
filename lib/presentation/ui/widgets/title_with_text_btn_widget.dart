@@ -8,7 +8,7 @@ class TextTitleWithBtn extends StatelessWidget {
   final bool isBtn;
   final bool value;
   final VoidCallback? onPressed;
-  
+
   const TextTitleWithBtn({
     required this.title,
     required this.isBtn,
