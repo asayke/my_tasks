@@ -12,7 +12,6 @@ import 'package:second_task_data_usage/presentation/ui/widgets/time_info_widget.
 import 'package:second_task_data_usage/presentation/ui/widgets/title_with_text_btn_widget.dart';
 import 'package:uuid/uuid.dart';
 
-/// экран добавления новых задач
 class AddTaskScreen extends StatefulWidget {
   const AddTaskScreen({Key? key}) : super(key: key);
 
@@ -108,7 +107,6 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
   }
 }
 
-/// виджет колонки набора текста
 class _TextInputRawWidget extends StatelessWidget {
   const _TextInputRawWidget({required this.textEditingController, Key? key})
       : super(key: key);
@@ -143,7 +141,6 @@ class _TextInputRawWidget extends StatelessWidget {
   }
 }
 
-/// виджет колонки выбора времени
 class _TimeInputRawWidget extends StatelessWidget {
   const _TimeInputRawWidget({
     required this.currentTime,

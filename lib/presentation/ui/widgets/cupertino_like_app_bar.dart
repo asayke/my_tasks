@@ -6,7 +6,6 @@ import '../../../../assets/icons/project_icons.dart';
 import '../../../../assets/strings/projects_strings.dart';
 import '../../../../assets/text_styles/project_styles.dart';
 
-/// виджет appbar с стилем ios
 class CupertinoLikeAppbar extends StatelessWidget
     implements PreferredSizeWidget {
   const CupertinoLikeAppbar({Key? key}) : super(key: key);
@@ -34,7 +33,6 @@ class CupertinoLikeAppbar extends StatelessWidget
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 

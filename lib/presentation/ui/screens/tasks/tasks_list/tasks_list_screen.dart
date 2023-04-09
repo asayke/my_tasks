@@ -13,7 +13,6 @@ import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/ad
 import 'package:second_task_data_usage/presentation/ui/widgets/check_box_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/widgets/title_with_text_btn_widget.dart';
 
-/// экран отображения списка задач
 class TasksScreen extends StatelessWidget {
   const TasksScreen({Key? key}) : super(key: key);
 

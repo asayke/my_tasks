@@ -4,7 +4,6 @@ import '../../../../assets/colors/project_colors.dart';
 import '../../../../assets/text_styles/project_styles.dart';
 import 'package:second_task_data_usage/utils/dates_convertor.dart';
 
-/// виджет показа времени
 class TimeInfoWidget extends StatelessWidget {
   const TimeInfoWidget({required this.time, Key? key}) : super(key: key);
   final TimeOfDay time;

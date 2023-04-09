@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../assets/strings/projects_strings.dart';
 import '../../../../assets/text_styles/project_styles.dart';
 
-/// виджет заголовка с возможной кнопкой
 class TextTitleWithBtn extends StatelessWidget {
   const TextTitleWithBtn({
     required this.title,

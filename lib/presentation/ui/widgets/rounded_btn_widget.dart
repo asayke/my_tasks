@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../assets/colors/project_colors.dart';
 import '../../../../assets/text_styles/project_styles.dart';
 
-/// виджет кнопки
 class RoundedBtnWidget extends StatelessWidget {
   const RoundedBtnWidget({
     required this.bntText,

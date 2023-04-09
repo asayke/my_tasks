@@ -7,7 +7,6 @@ import 'package:second_task_data_usage/presentation/bloc/tasks_list_bloc.dart';
 import 'package:second_task_data_usage/presentation/ui/screens/info/information_screen.dart';
 import 'package:second_task_data_usage/presentation/ui/screens/tasks/tasks_list/tasks_list_screen.dart';
 
-/// иницилизация приложения
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
