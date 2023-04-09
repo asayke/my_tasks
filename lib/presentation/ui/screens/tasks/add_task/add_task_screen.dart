@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:second_task_data_usage/presentation/bloc/tasks_list_bloc.dart';
-import '../../../../../../assets/strings/projects_strings.dart';
-import '../../../../../../assets/text_styles/project_styles.dart';
 import 'package:second_task_data_usage/domain/models/task.dart';
 import 'package:second_task_data_usage/presentation/ui/widgets/cupertino_like_app_bar.dart';
 import 'package:second_task_data_usage/presentation/ui/widgets/date_info_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/widgets/rounded_btn_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/widgets/time_info_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/widgets/title_with_text_btn_widget.dart';
+import 'package:second_task_data_usage/utils/strings/projects_strings.dart';
+import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
 import 'package:uuid/uuid.dart';
 
 class AddTaskScreen extends StatefulWidget {
@@ -127,7 +127,7 @@ class _TextInputRawWidget extends StatelessWidget {
           child: TextFormField(
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter some text';
+                return "Please enter some text";
               }
               return null;
             },

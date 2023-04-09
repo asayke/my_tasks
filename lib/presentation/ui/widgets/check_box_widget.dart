@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:second_task_data_usage/assets/colors/project_colors.dart';
-import '../../../../assets/text_styles/project_styles.dart';
+import 'package:second_task_data_usage/utils/colors/project_colors.dart';
 import 'package:second_task_data_usage/utils/dates_convertor.dart';
+import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
 
 class CheckBoxWidget extends StatelessWidget {
   final String title;

@@ -3,7 +3,7 @@ enum SortTypes {
   zaSort(1),
   dateSort(2);
 
-  const SortTypes(this.sortIndex);
-
   final int sortIndex;
+
+  const SortTypes(this.sortIndex);
 }

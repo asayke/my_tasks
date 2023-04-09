@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:second_task_data_usage/data/datasourses/firebase/firebase_remote_data_sourse.dart';
+import 'package:second_task_data_usage/data/datasour%D1%81es/firebase/firebase_remote_data_sourse.dart';
 import 'package:second_task_data_usage/data/repositories/firestore_task_repository.dart';
 import 'package:second_task_data_usage/presentation/bloc/tasks_list_bloc.dart';
 import 'package:second_task_data_usage/presentation/ui/screens/info/information_screen.dart';

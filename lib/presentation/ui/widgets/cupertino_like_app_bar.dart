@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../../assets/colors/project_colors.dart';
-import '../../../../assets/icons/project_icons.dart';
-import '../../../../assets/strings/projects_strings.dart';
-import '../../../../assets/text_styles/project_styles.dart';
+import 'package:second_task_data_usage/utils/colors/project_colors.dart';
+import 'package:second_task_data_usage/utils/icons/project_icons.dart';
+import 'package:second_task_data_usage/utils/strings/projects_strings.dart';
+import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
 
 class CupertinoLikeAppbar extends StatelessWidget
     implements PreferredSizeWidget {
@@ -52,17 +52,15 @@ class _AppbarPopLeading extends StatelessWidget {
               left: 9.w,
               right: 5.w,
             ),
-            child: SvgPicture.asset(ProjectIcons.iBack, color: ProjectColors.activeColor,) /*const SvgIcon(
-              icon: SvgIconData(
-                ProjectIcons.iBack,
-              ),
+            child: SvgPicture.asset(
+              ProjectIcons.backIcon,
               color: ProjectColors.activeColor,
-            ),*/
+            ),
           ),
           Text(
             ProjectStrings.appBarClose,
             style: ProjectStyles.semiBoldActive17OpenSans,
-          )
+          ),
         ],
       ),
     );

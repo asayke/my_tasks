@@ -1,8 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:second_task_data_usage/data/datasourses/firebase/interface_firebase_remote_data_sourse.dart';
+import 'package:second_task_data_usage/data/datasour%D1%81es/firebase/interface_firebase_remote_data_sourse.dart';
 import 'package:second_task_data_usage/domain/models/task.dart';
 
-/// база данных firebase
 class FirebaseRemoteDataSource extends IFirebaseRemoteDataSource {
   final firebaseTaskCollection =
       FirebaseFirestore.instance.collection('Ftasks').withConverter<Task>(

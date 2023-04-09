@@ -17,7 +17,6 @@ class DbTask extends Table {
   BoolColumn get isCompleted => boolean()();
 }
 
-/// локальная база данных с таблицей задач
 @DriftDatabase(tables: [DbTask])
 class MyDatabase extends _$MyDatabase {
   MyDatabase() : super(_openConnection());

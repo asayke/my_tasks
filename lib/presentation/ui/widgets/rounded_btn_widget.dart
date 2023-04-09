@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../assets/colors/project_colors.dart';
-import '../../../../assets/text_styles/project_styles.dart';
+import 'package:second_task_data_usage/utils/colors/project_colors.dart';
+import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
 
 class RoundedBtnWidget extends StatelessWidget {
   final String bntText;

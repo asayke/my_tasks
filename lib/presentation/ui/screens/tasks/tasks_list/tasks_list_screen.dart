@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:second_task_data_usage/presentation/bloc/tasks_list_bloc.dart';
-import '../../../../../../assets/colors/project_colors.dart';
-import '../../../../../../assets/icons/project_icons.dart';
-import '../../../../../../assets/strings/projects_strings.dart';
-import '../../../../../../assets/text_styles/project_styles.dart';
+import 'package:second_task_data_usage/utils/colors/project_colors.dart';
+import 'package:second_task_data_usage/utils/icons/project_icons.dart';
+import 'package:second_task_data_usage/utils/strings/projects_strings.dart';
+import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
 import 'package:second_task_data_usage/domain/models/sort_types.dart';
 import 'package:second_task_data_usage/domain/models/task.dart';
 import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/add_task_screen.dart';
@@ -83,15 +83,24 @@ class _TasksBottomNavigationBarState extends State<_TasksBottomNavigationBar> {
       showUnselectedLabels: false,
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: SvgPicture.asset(ProjectIcons.iBarUp, height: 40.h,),
+          icon: SvgPicture.asset(
+            ProjectIcons.barUpIcon,
+            height: 40.h,
+          ),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: SvgPicture.asset(ProjectIcons.iBarDown, height: 40.h,),
+          icon: SvgPicture.asset(
+            ProjectIcons.barDownIcon,
+            height: 40.h,
+          ),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: SvgPicture.asset(ProjectIcons.iBarDate, height: 40.h,),
+          icon: SvgPicture.asset(
+            ProjectIcons.barDateIcon,
+            height: 40.h,
+          ),
           label: '',
         ),
       ],
@@ -159,7 +168,7 @@ class _TasksNoTasksWidget extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.only(left: 52.w, top: 18.h),
-          child: Image.asset(ProjectIcons.iArrow2),
+          child: Image.asset(ProjectIcons.arrowIcon),
         ),
       ],
     );
@@ -177,16 +186,19 @@ class _TasksFloatingButtons extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           FloatingActionButton(
-            heroTag: "noHERO1",
+            heroTag: "h1",
             onPressed: () {
               Navigator.pushNamed(context, '/infoScreen');
             },
             backgroundColor: ProjectColors.btnColor,
-            child: SvgPicture.asset(ProjectIcons.iInfo, height: 32.h,),
+            child: SvgPicture.asset(
+              ProjectIcons.infoIcon,
+              height: 32.h,
+            ),
           ),
           Expanded(child: Container()),
           FloatingActionButton(
-            heroTag: "noHERO2",
+            heroTag: "h2",
             onPressed: () {
               showModalBottomSheet<void>(
                 isScrollControlled: true,
@@ -215,7 +227,10 @@ class _TasksFloatingButtons extends StatelessWidget {
               );
             },
             backgroundColor: ProjectColors.btnColor,
-            child: SvgPicture.asset(ProjectIcons.iPlus, height: 32.h,),
+            child: SvgPicture.asset(
+              ProjectIcons.addIcon,
+              height: 32.h,
+            ),
           ),
         ],
       ),

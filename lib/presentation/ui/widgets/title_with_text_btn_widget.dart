@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../assets/strings/projects_strings.dart';
-import '../../../../assets/text_styles/project_styles.dart';
+import 'package:second_task_data_usage/utils/strings/projects_strings.dart';
+import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
 
 class TextTitleWithBtn extends StatelessWidget {
   final String title;
