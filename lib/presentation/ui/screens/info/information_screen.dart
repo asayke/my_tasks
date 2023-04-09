@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:second_task_data_usage/presentation/ui/widgets/rounded_btn_widget.dart';
+import 'package:second_task_data_usage/presentation/ui/widgets/confirm_button_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/widgets/title_with_text_btn_widget.dart';
 import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
 
@@ -29,8 +29,8 @@ class InformationScreen extends StatelessWidget {
               Expanded(
                 child: Container(),
               ),
-              RoundedBtnWidget(
-                bntText: "Got it!",
+              ConfirnButtonWidget(
+                buttonText: "Got it!",
                 onPressed: () {
                   Navigator.pop(context);
                 },

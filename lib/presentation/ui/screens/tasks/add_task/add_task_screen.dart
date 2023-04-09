@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:second_task_data_usage/presentation/bloc/tasks_list_bloc.dart';
 import 'package:second_task_data_usage/domain/models/task.dart';
-import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/widgets/cupertino_like_app_bar.dart';
+import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/widgets/add_task_app_bar.dart';
 import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/widgets/date_info_widget.dart';
-import 'package:second_task_data_usage/presentation/ui/widgets/rounded_btn_widget.dart';
+import 'package:second_task_data_usage/presentation/ui/widgets/confirm_button_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/widgets/time_info_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/widgets/title_with_text_btn_widget.dart';
 import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
@@ -27,7 +27,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CupertinoLikeAppbar(),
+      appBar: const AddTaskAppbar(),
       body: Padding(
         padding: EdgeInsets.only(left: 20.0.w, right: 14.w, top: 0.h),
         child: Column(
@@ -59,8 +59,8 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
             SizedBox(
               height: 57.h,
             ),
-            RoundedBtnWidget(
-              bntText: "Done",
+            ConfirnButtonWidget(
+              buttonText: "Done",
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
                   context.read<TasksListBloc>().add(

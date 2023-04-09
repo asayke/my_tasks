@@ -5,9 +5,9 @@ import 'package:second_task_data_usage/utils/colors/project_colors.dart';
 import 'package:second_task_data_usage/utils/icons/project_icons.dart';
 import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
 
-class CupertinoLikeAppbar extends StatelessWidget
+class AddTaskAppbar extends StatelessWidget
     implements PreferredSizeWidget {
-  const CupertinoLikeAppbar({Key? key}) : super(key: key);
+  const AddTaskAppbar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class CupertinoLikeAppbar extends StatelessWidget
       backgroundColor: ProjectColors.appBarBackgroundColor,
       leading: const _AppbarPopLeading(),
       title: Text(
-        "task",
+        "Task",
         style: ProjectStyles.semiBoldBlack17OpenSans,
       ),
       centerTitle: true,

@@ -3,12 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:second_task_data_usage/utils/colors/project_colors.dart';
 import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
 
-class RoundedBtnWidget extends StatelessWidget {
-  final String bntText;
+class ConfirnButtonWidget extends StatelessWidget {
+  final String buttonText;
   final VoidCallback onPressed;
   
-  const RoundedBtnWidget({
-    required this.bntText,
+  const ConfirnButtonWidget({
+    required this.buttonText,
     required this.onPressed,
     Key? key,
   }) : super(key: key);
@@ -33,7 +33,7 @@ class RoundedBtnWidget extends StatelessWidget {
         height: 46.h,
         child: Center(
           child: Text(
-            bntText,
+            buttonText,
             style: ProjectStyles.semiBoldBtn14OpenSans,
           ),
         ),
