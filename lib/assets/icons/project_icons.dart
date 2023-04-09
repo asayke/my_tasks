@@ -1,4 +1,3 @@
-/// пути иконок
 abstract class ProjectIcons {
   static const String iPlus = 'assets/icons/plus.svg';
 

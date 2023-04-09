@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../colors/project_colors.dart';
 
-/// стили проекта
 abstract class ProjectStyles {
   static TextStyle boldBlack34OpenSans = TextStyle(
     fontSize: 34.sp,

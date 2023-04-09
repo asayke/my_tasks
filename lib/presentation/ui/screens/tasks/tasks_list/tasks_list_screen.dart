@@ -65,7 +65,6 @@ class TasksScreen extends StatelessWidget {
   }
 }
 
-/// виджет BottomNavigation с состояниями
 class _TasksBottomNavigationBar extends StatefulWidget {
   const _TasksBottomNavigationBar({Key? key}) : super(key: key);
 
@@ -121,7 +120,6 @@ class _TasksBottomNavigationBarState extends State<_TasksBottomNavigationBar> {
   }
 }
 
-/// виджет списка задач
 class _TasksListOfTasksWidget extends StatelessWidget {
   const _TasksListOfTasksWidget({required this.tasks, Key? key})
       : super(key: key);
@@ -152,7 +150,6 @@ class _TasksListOfTasksWidget extends StatelessWidget {
   }
 }
 
-/// виджет отображающий, что задач нет
 class _TasksNoTasksWidget extends StatelessWidget {
   const _TasksNoTasksWidget({Key? key}) : super(key: key);
 
@@ -178,7 +175,6 @@ class _TasksNoTasksWidget extends StatelessWidget {
   }
 }
 
-/// виджет 2 FloatingButtons
 class _TasksFloatingButtons extends StatelessWidget {
   const _TasksFloatingButtons({Key? key}) : super(key: key);
 
@@ -242,7 +238,6 @@ class _TasksFloatingButtons extends StatelessWidget {
   }
 }
 
-/// виджет загрузки задач
 class _LoadingWidget extends StatelessWidget {
   const _LoadingWidget({Key? key}) : super(key: key);
 

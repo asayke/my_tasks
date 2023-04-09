@@ -5,6 +5,11 @@ import '../../../../assets/text_styles/project_styles.dart';
 import 'package:second_task_data_usage/utils/dates_convertor.dart';
 
 class CheckBoxWidget extends StatelessWidget {
+  final String title;
+  final DateTime date;
+  final bool value;
+  final void Function(bool? value) onChanged;
+
   const CheckBoxWidget({
     required this.title,
     required this.date,
@@ -12,11 +17,6 @@ class CheckBoxWidget extends StatelessWidget {
     required this.onChanged,
     Key? key,
   }) : super(key: key);
-
-  final String title;
-  final DateTime date;
-  final bool value;
-  final void Function(bool? value) onChanged;
 
   @override
   Widget build(BuildContext context) {

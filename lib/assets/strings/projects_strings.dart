@@ -1,4 +1,3 @@
-/// строковые ресурсы проекта
 abstract class ProjectStrings {
   static const String titleList = 'My tasks';
 

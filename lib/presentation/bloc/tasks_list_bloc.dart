@@ -17,7 +17,7 @@ class TasksListBloc extends Bloc<TasksListEvent, TasksListState> {
   List<Task> _uncompletedTasks = [];
   TasksListBloc(this.repository)
       : super(
-          Initial(tasks: []),
+          const Initial(tasks: []),
         ) {
     on<_Started>(_onStarted);
     on<_ChangedReadiness>(_onChangedReadiness);

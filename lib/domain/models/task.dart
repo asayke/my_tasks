@@ -1,4 +1,3 @@
-/// сущность задачи имеющая json методы
 class Task {
   final String id;
   final String name;

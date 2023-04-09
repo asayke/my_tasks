@@ -5,8 +5,9 @@ import '../../../../assets/text_styles/project_styles.dart';
 import 'package:second_task_data_usage/utils/dates_convertor.dart';
 
 class DateInfoWidget extends StatelessWidget {
-  const DateInfoWidget({required this.date, Key? key}) : super(key: key);
   final DateTime date;
+
+  const DateInfoWidget({required this.date, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -4,6 +4,11 @@ import '../../../../assets/strings/projects_strings.dart';
 import '../../../../assets/text_styles/project_styles.dart';
 
 class TextTitleWithBtn extends StatelessWidget {
+  final String title;
+  final bool isBtn;
+  final bool value;
+  final VoidCallback? onPressed;
+  
   const TextTitleWithBtn({
     required this.title,
     required this.isBtn,
@@ -11,11 +16,6 @@ class TextTitleWithBtn extends StatelessWidget {
     this.onPressed,
     Key? key,
   }) : super(key: key);
-
-  final String title;
-  final bool isBtn;
-  final bool value;
-  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {

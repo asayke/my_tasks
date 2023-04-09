@@ -4,13 +4,14 @@ import '../../../../assets/colors/project_colors.dart';
 import '../../../../assets/text_styles/project_styles.dart';
 
 class RoundedBtnWidget extends StatelessWidget {
+  final String bntText;
+  final VoidCallback onPressed;
+  
   const RoundedBtnWidget({
     required this.bntText,
     required this.onPressed,
     Key? key,
   }) : super(key: key);
-  final String bntText;
-  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {

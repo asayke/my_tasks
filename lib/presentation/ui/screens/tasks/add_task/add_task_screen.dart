@@ -172,7 +172,6 @@ class _TimeInputRawWidget extends StatelessWidget {
   }
 }
 
-/// виджет колонки выбора даты
 class _DateInputRawWidget extends StatelessWidget {
   const _DateInputRawWidget({
     required this.currentDate,
