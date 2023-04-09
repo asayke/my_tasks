@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:second_task_data_usage/utils/colors/project_colors.dart';
-import 'package:second_task_data_usage/utils/icons/project_icons.dart';
-import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
+import 'package:second_task_data_usage/utils/colors/app_colors.dart';
+import 'package:second_task_data_usage/utils/icons/app_icons.dart';
+import 'package:second_task_data_usage/utils/text_styles/app_text_styles.dart';
 
 class AddTaskAppbar extends StatelessWidget
     implements PreferredSizeWidget {
@@ -21,11 +21,11 @@ class AddTaskAppbar extends StatelessWidget
       ),
       toolbarHeight: 58.h,
       leadingWidth: 150.w,
-      backgroundColor: ProjectColors.appBarBackgroundColor,
+      backgroundColor: AppColors.appBarBackgroundColor,
       leading: const _AppbarPopLeading(),
       title: Text(
         "Task",
-        style: ProjectStyles.semiBoldBlack17OpenSans,
+        style: AppStyles.semiBoldBlack17OpenSans,
       ),
       centerTitle: true,
     );
@@ -52,13 +52,13 @@ class _AppbarPopLeading extends StatelessWidget {
               right: 5.w,
             ),
             child: SvgPicture.asset(
-              ProjectIcons.backIcon,
-              color: ProjectColors.activeColor,
+              AppIcons.backIcon,
+              color: AppColors.activeColor,
             ),
           ),
           Text(
             "Close",
-            style: ProjectStyles.semiBoldActive17OpenSans,
+            style: AppStyles.semiBoldActive17OpenSans,
           ),
         ],
       ),

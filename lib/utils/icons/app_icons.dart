@@ -1,4 +1,4 @@
-abstract class ProjectIcons {
+abstract class AppIcons {
   static const String addIcon = 'assets/icons/addIcon.svg';
   static const String infoIcon = 'assets/icons/info.svg';
   static const String barUpIcon = 'assets/icons/bottom_bar_up.svg';

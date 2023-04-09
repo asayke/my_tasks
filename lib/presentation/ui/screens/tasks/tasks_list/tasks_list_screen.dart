@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:second_task_data_usage/presentation/bloc/tasks_list_bloc.dart';
-import 'package:second_task_data_usage/utils/colors/project_colors.dart';
-import 'package:second_task_data_usage/utils/icons/project_icons.dart';
-import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
+import 'package:second_task_data_usage/utils/colors/app_colors.dart';
+import 'package:second_task_data_usage/utils/icons/app_icons.dart';
+import 'package:second_task_data_usage/utils/text_styles/app_text_styles.dart';
 import 'package:second_task_data_usage/domain/models/sort_types.dart';
 import 'package:second_task_data_usage/domain/models/task.dart';
 import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/add_task_screen.dart';
@@ -19,7 +19,7 @@ class TasksScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: ProjectColors.screenBackgroundColor,
+        backgroundColor: AppColors.screenBackgroundColor,
         bottomNavigationBar: const _TasksBottomNavigationBar(),
         body: Padding(
           padding: EdgeInsets.only(left: 20.0.w, right: 14.w),
@@ -83,27 +83,27 @@ class _TasksBottomNavigationBarState extends State<_TasksBottomNavigationBar> {
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
-            ProjectIcons.barUpIcon,
+            AppIcons.barUpIcon,
             height: 40.h,
           ),
           label: '',
         ),
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
-            ProjectIcons.barDownIcon,
+            AppIcons.barDownIcon,
             height: 40.h,
           ),
           label: '',
         ),
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
-            ProjectIcons.barDateIcon,
+            AppIcons.barDateIcon,
             height: 40.h,
           ),
           label: '',
         ),
       ],
-      selectedItemColor: ProjectColors.activeColor,
+      selectedItemColor: AppColors.activeColor,
       currentIndex: _currentIndex,
       onTap: (int index) {
         setState(() {
@@ -162,12 +162,12 @@ class _TasksNoTasksWidget extends StatelessWidget {
           width: 156.w,
           child: Text(
             "Looks like there is no tasks yet! Go ahead and push a plus button below",
-            style: ProjectStyles.semiBoldGrey15OpenSans,
+            style: AppStyles.semiBoldGrey15OpenSans,
           ),
         ),
         Padding(
           padding: EdgeInsets.only(left: 52.w, top: 18.h),
-          child: Image.asset(ProjectIcons.arrowIcon),
+          child: Image.asset(AppIcons.arrowIcon),
         ),
       ],
     );
@@ -189,9 +189,9 @@ class _TasksFloatingButtons extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, '/infoScreen');
             },
-            backgroundColor: ProjectColors.btnColor,
+            backgroundColor: AppColors.btnColor,
             child: SvgPicture.asset(
-              ProjectIcons.infoIcon,
+              AppIcons.infoIcon,
               height: 32.h,
             ),
           ),
@@ -225,9 +225,9 @@ class _TasksFloatingButtons extends StatelessWidget {
                 },
               );
             },
-            backgroundColor: ProjectColors.btnColor,
+            backgroundColor: AppColors.btnColor,
             child: SvgPicture.asset(
-              ProjectIcons.addIcon,
+              AppIcons.addIcon,
               height: 32.h,
             ),
           ),

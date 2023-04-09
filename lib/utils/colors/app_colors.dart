@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class ProjectColors {
+abstract class AppColors {
   static const Color textColorPrimary = Colors.black;
   static const Color textColorSecondary = Color.fromRGBO(115, 115, 115, 1);
   static const Color textColorSecondarySubTitle = Color.fromRGBO(163, 163, 163, 1);

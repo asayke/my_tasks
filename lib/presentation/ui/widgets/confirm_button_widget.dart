@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:second_task_data_usage/utils/colors/project_colors.dart';
-import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
+import 'package:second_task_data_usage/utils/colors/app_colors.dart';
+import 'package:second_task_data_usage/utils/text_styles/app_text_styles.dart';
 
 class ConfirnButtonWidget extends StatelessWidget {
   final String buttonText;
@@ -22,10 +22,10 @@ class ConfirnButtonWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(12.r),
           ),
         ),
-        backgroundColor: MaterialStateProperty.all(ProjectColors.btnColor),
+        backgroundColor: MaterialStateProperty.all(AppColors.btnColor),
         shadowColor: MaterialStateProperty.all(Colors.transparent),
         elevation: MaterialStateProperty.all(0),
-        foregroundColor: MaterialStateProperty.all(ProjectColors.iconColor),
+        foregroundColor: MaterialStateProperty.all(AppColors.iconColor),
       ),
       onPressed: onPressed,
       child: SizedBox(
@@ -34,7 +34,7 @@ class ConfirnButtonWidget extends StatelessWidget {
         child: Center(
           child: Text(
             buttonText,
-            style: ProjectStyles.semiBoldBtn14OpenSans,
+            style: AppStyles.semiBoldBtn14OpenSans,
           ),
         ),
       ),

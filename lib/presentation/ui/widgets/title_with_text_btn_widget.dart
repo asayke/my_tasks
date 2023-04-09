@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
+import 'package:second_task_data_usage/utils/text_styles/app_text_styles.dart';
 
 class TextTitleWithBtn extends StatelessWidget {
   final String title;
@@ -24,7 +24,7 @@ class TextTitleWithBtn extends StatelessWidget {
         children: [
           Text(
             title,
-            style: ProjectStyles.boldBlack34OpenSans,
+            style: AppStyles.boldBlack34OpenSans,
             textAlign: TextAlign.center,
           ),
           Expanded(
@@ -36,7 +36,7 @@ class TextTitleWithBtn extends StatelessWidget {
                 onPressed: onPressed,
                 child: Text(
                   value ? "Show completed" : "Hide completed",
-                  style: ProjectStyles.semiBoldActive13OpenSans,
+                  style: AppStyles.semiBoldActive13OpenSans,
                 ),
               ),
             ),

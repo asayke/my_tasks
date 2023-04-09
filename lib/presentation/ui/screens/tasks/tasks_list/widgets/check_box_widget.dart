@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:second_task_data_usage/utils/colors/project_colors.dart';
+import 'package:second_task_data_usage/utils/colors/app_colors.dart';
 import 'package:second_task_data_usage/utils/dates_convertor.dart';
-import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
+import 'package:second_task_data_usage/utils/text_styles/app_text_styles.dart';
 
 class CheckBoxWidget extends StatelessWidget {
   final String title;
@@ -23,22 +23,22 @@ class CheckBoxWidget extends StatelessWidget {
     return CheckboxListTile(
       contentPadding: EdgeInsets.zero,
       controlAffinity: ListTileControlAffinity.leading,
-      checkColor: ProjectColors.iconColor,
-      activeColor: ProjectColors.btnColor,
+      checkColor: AppColors.iconColor,
+      activeColor: AppColors.btnColor,
       checkboxShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
           Radius.circular(6.r),
         ),
-        side: BorderSide(color: ProjectColors.borderColor, width: 2.r),
+        side: BorderSide(color: AppColors.borderColor, width: 2.r),
       ),
       title: Opacity(
         opacity: value ? 0.3 : 1,
         child: Text(
           title,
           style: value
-              ? ProjectStyles.semiBoldGrey15OpenSans
+              ? AppStyles.semiBoldGrey15OpenSans
                   .copyWith(decoration: TextDecoration.lineThrough)
-              : ProjectStyles.semiBoldGrey15OpenSans,
+              : AppStyles.semiBoldGrey15OpenSans,
         ),
       ),
       subtitle: Opacity(
@@ -46,9 +46,9 @@ class CheckBoxWidget extends StatelessWidget {
         child: Text(
           DatesConvertor.convertDateToMinuteYear(date),
           style: value
-              ? ProjectStyles.italicActive13OpenSans
+              ? AppStyles.italicActive13OpenSans
                   .copyWith(decoration: TextDecoration.lineThrough)
-              : ProjectStyles.italicActive13OpenSans,
+              : AppStyles.italicActive13OpenSans,
         ),
       ),
       value: value,

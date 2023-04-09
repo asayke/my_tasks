@@ -8,7 +8,7 @@ import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/wi
 import 'package:second_task_data_usage/presentation/ui/widgets/confirm_button_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/widgets/time_info_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/widgets/title_with_text_btn_widget.dart';
-import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
+import 'package:second_task_data_usage/utils/text_styles/app_text_styles.dart';
 import 'package:uuid/uuid.dart';
 
 class AddTaskScreen extends StatefulWidget {
@@ -117,7 +117,7 @@ class _TextInputRawWidget extends StatelessWidget {
       children: [
         Text(
           "Name",
-          style: ProjectStyles.semiBoldBlack20OpenSans,
+          style: AppStyles.semiBoldBlack20OpenSans,
         ),
         SizedBox(
           width: 11.w,
@@ -155,7 +155,7 @@ class _TimeInputRawWidget extends StatelessWidget {
       children: [
         Text(
           "Time",
-          style: ProjectStyles.semiBoldBlack20OpenSans,
+          style: AppStyles.semiBoldBlack20OpenSans,
         ),
         SizedBox(
           width: 22.w,
@@ -186,7 +186,7 @@ class _DateInputRawWidget extends StatelessWidget {
       children: [
         Text(
           "Date",
-          style: ProjectStyles.semiBoldBlack20OpenSans,
+          style: AppStyles.semiBoldBlack20OpenSans,
         ),
         SizedBox(
           width: 24.w,
