@@ -10,7 +10,7 @@ import 'package:second_task_data_usage/utils/text_styles/project_styles.dart';
 import 'package:second_task_data_usage/domain/models/sort_types.dart';
 import 'package:second_task_data_usage/domain/models/task.dart';
 import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/add_task_screen.dart';
-import 'package:second_task_data_usage/presentation/ui/widgets/check_box_widget.dart';
+import 'package:second_task_data_usage/presentation/ui/screens/tasks/tasks_list/widgets/check_box_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/widgets/title_with_text_btn_widget.dart';
 
 class TasksScreen extends StatelessWidget {
