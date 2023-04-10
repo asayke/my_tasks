@@ -5,8 +5,9 @@ import 'package:second_task_data_usage/utils/dates_convertor.dart';
 import 'package:second_task_data_usage/utils/text_styles/app_text_styles.dart';
 
 class TimeInfoWidget extends StatelessWidget {
-  const TimeInfoWidget({required this.time, Key? key}) : super(key: key);
   final TimeOfDay time;
+
+  const TimeInfoWidget({required this.time, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

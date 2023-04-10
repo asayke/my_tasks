@@ -32,7 +32,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
         padding: EdgeInsets.only(left: 20.0.w, right: 14.w, top: 0.h),
         child: Column(
           children: [
-            const TextTitleWithBtn(
+            const TextTitleWithButton(
               title: "Add a task",
               isBtn: false,
             ),

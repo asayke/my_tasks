@@ -22,7 +22,7 @@ class TextInputRawWidget extends StatelessWidget {
         Expanded(
           child: TextFormField(
             validator: (value) {
-              if (value == null || value.isEmpty) {
+              if (value!.isEmpty) {
                 return "Please enter some text";
               }
               return null;

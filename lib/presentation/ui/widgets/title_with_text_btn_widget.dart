@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:second_task_data_usage/utils/text_styles/app_text_styles.dart';
 
-class TextTitleWithBtn extends StatelessWidget {
+class TextTitleWithButton extends StatelessWidget {
   final String title;
   final bool isBtn;
   final bool value;
   final VoidCallback? onPressed;
 
-  const TextTitleWithBtn({
+  const TextTitleWithButton({
     required this.title,
     required this.isBtn,
     this.value = false,

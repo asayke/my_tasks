@@ -5,8 +5,7 @@ import 'package:second_task_data_usage/utils/colors/app_colors.dart';
 import 'package:second_task_data_usage/utils/icons/app_icons.dart';
 import 'package:second_task_data_usage/utils/text_styles/app_text_styles.dart';
 
-class AddTaskAppbar extends StatelessWidget
-    implements PreferredSizeWidget {
+class AddTaskAppbar extends StatelessWidget implements PreferredSizeWidget {
   const AddTaskAppbar({Key? key}) : super(key: key);
 
   @override

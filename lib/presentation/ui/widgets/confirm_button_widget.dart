@@ -6,7 +6,7 @@ import 'package:second_task_data_usage/utils/text_styles/app_text_styles.dart';
 class ConfirnButtonWidget extends StatelessWidget {
   final String buttonText;
   final VoidCallback onPressed;
-  
+
   const ConfirnButtonWidget({
     required this.buttonText,
     required this.onPressed,

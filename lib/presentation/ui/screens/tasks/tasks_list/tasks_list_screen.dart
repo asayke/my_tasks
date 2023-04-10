@@ -4,12 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:second_task_data_usage/presentation/bloc/tasks_list_bloc.dart';
 import 'package:second_task_data_usage/presentation/ui/screens/tasks/tasks_list/widgets/loading_widget.dart';
+import 'package:second_task_data_usage/presentation/ui/screens/tasks/tasks_list/widgets/no_tasks_widget.dart';
+import 'package:second_task_data_usage/presentation/ui/screens/tasks/tasks_list/widgets/tasks_floatings_button.dart';
 import 'package:second_task_data_usage/utils/colors/app_colors.dart';
 import 'package:second_task_data_usage/utils/icons/app_icons.dart';
-import 'package:second_task_data_usage/utils/text_styles/app_text_styles.dart';
 import 'package:second_task_data_usage/domain/models/sort_types.dart';
 import 'package:second_task_data_usage/domain/models/task.dart';
-import 'package:second_task_data_usage/presentation/ui/screens/tasks/add_task/add_task_screen.dart';
 import 'package:second_task_data_usage/presentation/ui/screens/tasks/tasks_list/widgets/check_box_widget.dart';
 import 'package:second_task_data_usage/presentation/ui/widgets/title_with_text_btn_widget.dart';
 
@@ -29,7 +29,7 @@ class TasksScreen extends StatelessWidget {
             children: [
               BlocBuilder<TasksListBloc, TasksListState>(
                 builder: (context, state) {
-                  return TextTitleWithBtn(
+                  return TextTitleWithButton(
                     title: "My tasks",
                     isBtn: state is Initial,
                     onPressed: () {
@@ -48,7 +48,7 @@ class TasksScreen extends StatelessWidget {
                         tasks: state.tasks,
                       );
                     } else {
-                      return const _TasksNoTasksWidget();
+                      return const TasksNoTasksWidget();
                     }
                   } else {
                     return const LoadingWidget();
@@ -59,7 +59,7 @@ class TasksScreen extends StatelessWidget {
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: const _TasksFloatingButtons(),
+        floatingActionButton: const TasksFloatingButtons(),
       ),
     );
   }
@@ -145,94 +145,6 @@ class _TasksListOfTasksWidget extends StatelessWidget {
             },
           );
         },
-      ),
-    );
-  }
-}
-
-class _TasksNoTasksWidget extends StatelessWidget {
-  const _TasksNoTasksWidget({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(
-          height: 115.h,
-          width: 156.w,
-          child: Text(
-            "Looks like there is no tasks yet! Go ahead and push a plus button below",
-            style: AppStyles.semiBoldGrey15OpenSans,
-          ),
-        ),
-        Padding(
-          padding: EdgeInsets.only(left: 52.w, top: 18.h),
-          child: Image.asset(AppIcons.arrowIcon),
-        ),
-      ],
-    );
-  }
-}
-
-class _TasksFloatingButtons extends StatelessWidget {
-  const _TasksFloatingButtons({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          FloatingActionButton(
-            heroTag: "h1",
-            onPressed: () {
-              Navigator.pushNamed(context, '/infoScreen');
-            },
-            backgroundColor: AppColors.btnColor,
-            child: SvgPicture.asset(
-              AppIcons.infoIcon,
-              height: 32.h,
-            ),
-          ),
-          Expanded(child: Container()),
-          FloatingActionButton(
-            heroTag: "h2",
-            onPressed: () {
-              showModalBottomSheet<void>(
-                isScrollControlled: true,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25.0.r),
-                ),
-                context: context,
-                builder: (BuildContext context) {
-                  return ClipRRect(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(25.0.r),
-                      topRight: Radius.circular(25.0.r),
-                    ),
-                    child: Container(
-                      height: 700.h,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.red,
-                        ),
-                        shape: BoxShape.circle,
-                      ),
-                      child: const AddTaskScreen(),
-                    ),
-                  );
-                },
-              );
-            },
-            backgroundColor: AppColors.btnColor,
-            child: SvgPicture.asset(
-              AppIcons.addIcon,
-              height: 32.h,
-            ),
-          ),
-        ],
       ),
     );
   }

@@ -8,8 +8,10 @@ abstract class AppStyles {
  
   static TextStyle boldBlack34OpenSans = TextStyle(
     fontSize: 34.sp,
+    height: 41.h / 34.sp,
+    letterSpacing: 0.37.w,
     fontFamily: fontFamilyOpenSans,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w700,
     color: AppColors.textColorPrimary,
   );
 
@@ -17,6 +19,9 @@ abstract class AppStyles {
     fontSize: 22.sp,
     fontFamily: fontFamilyOpenSans,
     color: AppColors.textColorPrimary,
+    height: 28.h / 22.sp,
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.35.w,    
   );
 
   static TextStyle semiBoldBlack20OpenSans = TextStyle(
@@ -38,6 +43,8 @@ abstract class AppStyles {
     fontFamily: fontFamilyOpenSans,
     color: AppColors.textColorSecondary,
     fontWeight: FontWeight.w600,
+    letterSpacing: -0.24.w,
+    height: 20.h / 15.sp,
   );
 
   static TextStyle semiBoldActive13OpenSans = TextStyle(
